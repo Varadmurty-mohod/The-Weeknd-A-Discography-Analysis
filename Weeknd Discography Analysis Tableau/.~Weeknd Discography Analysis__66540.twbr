@@ -1138,6 +1138,13 @@
       <simple-id uuid='{B3CCB138-7A2D-4331-A1B7-B7D26951C1F7}' />
     </worksheet>
     <worksheet name='Tracks - Starboy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -1563,14 +1570,14 @@
       </cards>
       <simple-id uuid='{C93D1EB8-1692-4A77-8404-A0E66D17DEAF}' />
     </window>
-    <window class='dashboard' maximized='true' name='Starboy'>
+    <window class='dashboard' name='Starboy'>
       <viewpoints>
         <viewpoint name='Tracks - Starboy' />
       </viewpoints>
       <active id='3' />
       <simple-id uuid='{9CC63831-86B2-4B4F-A34E-1C0900B7C122}' />
     </window>
-    <window class='worksheet' name='Tracks - Starboy'>
+    <window class='worksheet' maximized='true' name='Tracks - Starboy'>
       <cards>
         <edge name='left'>
           <strip size='160'>
