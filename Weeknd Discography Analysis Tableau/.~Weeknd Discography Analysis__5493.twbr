@@ -554,6 +554,15 @@
           <style-rule element='mark'>
             <encoding attr='size-bar' field='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:acousticness:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
           </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
         </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
@@ -657,6 +666,65 @@
       </table>
       <simple-id uuid='{D31B0C47-A22B-436A-817D-64A1965D6307}' />
     </worksheet>
+    <worksheet name='Danceability - Starboy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Danceability - Starboy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[danceability]' derivation='Sum' name='[sum:danceability:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:danceability:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{CCF69F75-5781-4D71-A684-0E1D8ED130AC}' />
+    </worksheet>
     <worksheet name='Danceability over the years'>
       <table>
         <view>
@@ -753,6 +821,71 @@
       </table>
       <simple-id uuid='{CF657BCF-B62E-45EF-BF45-736C912CF17B}' />
     </worksheet>
+    <worksheet name='Energy - Starboy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Energy - Starboy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[energy]' derivation='Sum' name='[sum:energy:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:energy:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{303D2FE2-9226-4398-BD57-8FD4A5AD06F9}' />
+    </worksheet>
     <worksheet name='Energy over the years'>
       <table>
         <view>
@@ -801,6 +934,71 @@
       </table>
       <simple-id uuid='{E7FBAA69-F6DC-4C12-B280-1381BFD47E53}' />
     </worksheet>
+    <worksheet name='Instrumentalness - Starboy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Instrumentalness - Starboy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[instrumentalness]' derivation='Sum' name='[sum:instrumentalness:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:instrumentalness:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{3B96891C-A3AC-4E13-8B90-BB0BE5C62FAC}' />
+    </worksheet>
     <worksheet name='Instrumentalness over the years'>
       <table>
         <view>
@@ -848,6 +1046,136 @@
         <cols>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[avg:instrumentalness:qk]</cols>
       </table>
       <simple-id uuid='{89407783-1DF1-4B20-9506-21DA3939EC71}' />
+    </worksheet>
+    <worksheet name='Liveliness - Starboy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Liveliness - Starboy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[liveness]' derivation='Sum' name='[sum:liveness:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:liveness:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{1A311D33-2347-4B30-9C81-725ED42F251E}' />
+    </worksheet>
+    <worksheet name='Liveliness - Starboy (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Loudness - Starboy</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[loudness]' derivation='Sum' name='[sum:loudness:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#efc50a' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f42840' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:loudness:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{91211A80-D4BA-4C6C-9433-D38BE8E52F1F}' />
     </worksheet>
     <worksheet name='Liveliness over the years'>
       <table>
@@ -993,6 +1321,42 @@
       </table>
       <simple-id uuid='{94614606-EC6F-40A0-A3AE-58CC0F3FB1FF}' />
     </worksheet>
+    <worksheet name='Sheet 20'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
+            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[energy]' derivation='Sum' name='[sum:energy:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
+            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:track_name:nk] * [federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:energy:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FD6A2091-835E-419A-93BA-49A1A976C57D}' />
+    </worksheet>
     <worksheet name='Speechiness over the years'>
       <table>
         <view>
@@ -1137,94 +1501,6 @@
       </table>
       <simple-id uuid='{B3CCB138-7A2D-4331-A1B7-B7D26951C1F7}' />
     </worksheet>
-    <worksheet name='Tracks - Starboy'>
-      <layout-options>
-        <title>
-          <formatted-text>
-            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
-          </formatted-text>
-        </title>
-      </layout-options>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='theWeekndAll' name='federated.0em42xg0nwvhvx15lvuf31e3pae9' />
-          </datasources>
-          <datasource-dependencies datasource='federated.0em42xg0nwvhvx15lvuf31e3pae9'>
-            <column caption='Album Name' datatype='string' name='[album_name]' role='dimension' type='nominal' />
-            <column-instance column='[album_name]' derivation='None' name='[none:album_name:nk]' pivot='key' type='nominal' />
-            <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
-            <column-instance column='[uniqueID]' derivation='None' name='[none:uniqueID:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[uniqueID]' derivation='Sum' name='[sum:uniqueID:qk]' pivot='key' type='quantitative' />
-            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
-            <column caption='Unique ID' datatype='integer' name='[uniqueID]' role='dimension' type='ordinal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]'>
-            <groupfilter function='member' level='[none:album_name:nk]' member='&quot;Starboy&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
-          </filter>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:track_name:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[sum:uniqueID:qk]' shelf='rows' />
-          </shelf-sorts>
-          <slices>
-            <column>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:album_name:nk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='header'>
-            <format attr='background-color' value='#f42840' />
-            <format attr='band-color' scope='rows' value='#f42840' />
-          </style-rule>
-          <style-rule element='field-labels'>
-            <format attr='font-family' value='Tiro Bangla' />
-          </style-rule>
-          <style-rule element='label'>
-            <format attr='font-family' field='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:track_name:nk]' value='Tiro Bangla' />
-          </style-rule>
-          <style-rule element='pane'>
-            <format attr='background-color' value='#f42840' />
-            <format attr='band-color' scope='rows' value='#f42840' />
-          </style-rule>
-          <style-rule element='table'>
-            <format attr='background-color' value='#f42840' />
-            <format attr='band-size' scope='rows' value='1' />
-          </style-rule>
-          <style-rule element='worksheet'>
-            <format attr='font-family' value='Tiro Bangla' />
-          </style-rule>
-          <style-rule element='caption'>
-            <format attr='background-color' value='#f42840' />
-          </style-rule>
-          <style-rule element='title'>
-            <format attr='font-family' value='Tiro Bangla' />
-            <format attr='background-color' value='#f42840' />
-            <format attr='border-color' value='#000000' />
-            <format attr='border-width' value='0' />
-            <format attr='border-style' value='none' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <text column='[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:uniqueID:ok]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='true' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.0em42xg0nwvhvx15lvuf31e3pae9].[none:track_name:nk]</rows>
-        <cols />
-      </table>
-      <simple-id uuid='{E641A658-F002-490B-9927-DD13B50D8617}' />
-    </worksheet>
     <worksheet name='Valence over the years'>
       <table>
         <view>
@@ -1319,8 +1595,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2350' minheight='2350' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='50' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99260' id='49' param='vert' type-v2='layout-flow' w='98518' x='741' y='370'>
+            <zone h='100000' id='58' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99260' id='57' param='vert' type-v2='layout-flow' w='98518' x='741' y='370'>
                 <zone fixed-size='280' h='99260' id='3' is-centered='0' is-fixed='true' param='/Users/varadmurtymohod/Downloads/peakpx (1).jpg' type-v2='bitmap' w='98518' x='741' y='370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1469,14 +1745,18 @@
           </zone-style>
         </zone>
         <zone h='11343' id='17' param='/Users/varadmurtymohod/Library/Mobile Documents/com~apple~CloudDocs/starboy.jpg' type-v2='bitmap' w='105926' x='-2963' y='2315' />
-        <zone h='21250' id='20' name='Tracks - Starboy' w='20185' x='5185' y='16019' />
+        <zone h='4352' id='31' name='Acousticness - Starboy' w='23611' x='32778' y='15880' />
+        <zone h='3935' id='32' name='Danceability - Starboy' w='23889' x='32685' y='21157' />
+        <zone h='4213' id='33' name='Energy - Starboy' w='24259' x='32315' y='26204' />
+        <zone h='3981' id='34' name='Instrumentalness - Starboy' w='24722' x='32037' y='31481' />
+        <zone h='4167' id='41' name='Liveliness - Starboy' w='25278' x='63519' y='15926' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='28' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99260' id='27' param='vert' type-v2='layout-flow' w='98518' x='741' y='370'>
+            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99260' id='39' param='vert' type-v2='layout-flow' w='98518' x='741' y='370'>
                 <zone fixed-size='280' h='99260' id='3' is-fixed='true' is-scaled='1' param='/Users/varadmurtymohod/Downloads/peakpx.jpg' type-v2='bitmap' w='98518' x='741' y='370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1495,7 +1775,34 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='21250' id='20' is-fixed='true' name='Tracks - Starboy' w='20185' x='5185' y='16019'>
+                <zone fixed-size='94' h='4352' id='31' is-fixed='true' name='Acousticness - Starboy' w='23611' x='31852' y='16111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='85' h='3935' id='32' is-fixed='true' name='Danceability - Starboy' w='23889' x='31852' y='21157'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='4213' id='33' is-fixed='true' name='Energy - Starboy' w='24259' x='31667' y='26204'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='86' h='3981' id='34' is-fixed='true' name='Instrumentalness - Starboy' w='24722' x='31574' y='31481'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1544,7 +1851,7 @@
     </window>
     <window class='dashboard' name='Home Page'>
       <viewpoints />
-      <active id='-1' />
+      <active id='19' />
       <simple-id uuid='{E779044E-7D38-4192-8080-8B632747A166}' />
     </window>
     <window class='worksheet' name='Acousticness - Starboy'>
@@ -1570,14 +1877,7 @@
       </cards>
       <simple-id uuid='{C93D1EB8-1692-4A77-8404-A0E66D17DEAF}' />
     </window>
-    <window class='dashboard' name='Starboy'>
-      <viewpoints>
-        <viewpoint name='Tracks - Starboy' />
-      </viewpoints>
-      <active id='3' />
-      <simple-id uuid='{9CC63831-86B2-4B4F-A34E-1C0900B7C122}' />
-    </window>
-    <window class='worksheet' maximized='true' name='Tracks - Starboy'>
+    <window class='worksheet' name='Danceability - Starboy'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1598,10 +1898,120 @@
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <floating-toolbar-visibility value='2' />
-      </viewpoint>
-      <simple-id uuid='{1A5DF481-C01B-4F6F-A154-D6BD3EC2F6C2}' />
+      <simple-id uuid='{3D67FBE3-7E69-4016-BF58-205E02637C55}' />
+    </window>
+    <window class='worksheet' name='Energy - Starboy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6573378D-7648-4E2E-80D3-1D3261E1DECF}' />
+    </window>
+    <window class='worksheet' name='Instrumentalness - Starboy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6EA9244E-9B2C-45E6-B9F5-B71D4DB8C2BA}' />
+    </window>
+    <window class='worksheet' name='Liveliness - Starboy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3B081CF6-FB8E-422B-9143-842D948C39C7}' />
+    </window>
+    <window class='worksheet' name='Liveliness - Starboy (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{83F4D5B0-B883-4B54-B2E6-576A4E1A8929}' />
+    </window>
+    <window class='dashboard' name='Starboy'>
+      <viewpoints>
+        <viewpoint name='Acousticness - Starboy'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Danceability - Starboy'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Energy - Starboy'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Instrumentalness - Starboy'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Liveliness - Starboy'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{9CC63831-86B2-4B4F-A34E-1C0900B7C122}' />
     </window>
     <window class='worksheet' name='Acousticness over the years'>
       <cards>
@@ -1878,6 +2288,29 @@
         </edge>
       </cards>
       <simple-id uuid='{8FE5891D-CB2F-427F-92AD-4EAF57304049}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 20'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{18BB23A6-98A3-4B8D-9F4D-6C3FDBA1A1F6}' />
     </window>
   </windows>
 </workbook>
